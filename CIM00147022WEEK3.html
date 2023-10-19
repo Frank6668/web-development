@@ -1,0 +1,101 @@
+<html>
+    <style>
+        Body{
+            font-family:Calibri,Helvetica,sans-serif;
+            background-colour:pink;
+         }
+          button{
+            background-color:#4CAF50;
+            width:auto;
+            color:orange;
+            padding:10px;
+            margin:10px 10px;
+            border:none;
+            cursor:pointer;
+            position:relative;
+        
+        
+           }
+           form{
+            border:3px solid #f1f1f1;
+           }
+          input[type=text],input[type=password]{
+            width:50%
+            margin:8px 0;
+            padding:12px 20px;
+            display:inline-block;
+            border:2px solid green;
+            box-sizing:border-box;
+            position:relative;
+        
+        
+          }
+        
+          input[type=radio]{
+            display:inline-block;
+          }
+          button:hover{
+            opacity:0.7;
+          }
+        
+          .break-point::before{
+            content:"hiddentext";
+            font-size:0;
+            display:block;
+            line-height:0;
+        
+          }
+          .break-point::after{
+            content:"hiddentext";
+            font-size: 0;
+            dispay: block;
+            line-height: 0;
+          }
+        
+          .container{
+            padding:25px;
+            background-color:lightblue;
+          }
+        
+          h1{
+            text-align:center;
+        
+          }
+        
+        
+        
+        
+    </style>
+    <head>
+
+        <link rel="'stlyesheet"type="text/css"href="stlye.css">
+    </head>
+    <body>
+       <form action ="validate.php"method="post"
+        Name:<input type="text" name="name"required>
+         <br/><br/>
+        E-mail:<input type="text" name="email"required>
+        <br/><br/>
+        Website:<input type="text" name="website">
+        <br/><br/>
+        Comment:<textarea name="comment" rows="5" cols="40"></textarea>
+        <br/><br/>
+        Gender:
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <br/><br/>
+        <button name="submit">Submit</button>
+        <button type="reset"name="reset">Cancel</button>
+    </form>
+   </body>
+  </html>
+  <?php
+  //this program will only mak sure data is given through the post
+  if (S_SERVER["REQUEST_METHOD"]=="POST"){
+    $name1=test_input(S_POST["name"]):
+    $email=test_input(S_POST["email"]):
+    $website=test_input(S_POST["website"]):
+    $comment=test_input(S_POST["comment"]):
+    $gender=test_input(S_POST["gender"]):
+  }
+  echo $name1."<br/>".$email."<br/>".$website"<br/>".$
